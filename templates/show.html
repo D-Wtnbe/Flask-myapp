@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+   <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+         <div>
+           <table>
+             {% for user in user %}
+             <tr>
+               <td>ユーザー名:</td>
+               <td> {{user.userid}} </td>
+             </tr>
+             <tr>
+               <td>メールアドレス:</td>
+               <td> {{user.email}} </td>
+             </tr>
+             {% endfor %}
+           </table>
+         </div>
+{% endblock %}

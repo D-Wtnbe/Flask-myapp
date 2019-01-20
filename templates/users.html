@@ -1,0 +1,32 @@
+         {% extends "base.html" %}
+         {% block content %}
+         {% if current_user.is_authenticated() %}
+             <body>
+               <div class="container">
+               <h1>ユーザー一覧</h1>
+                   <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>名前</th>
+                          <th>ユーザーID</th>
+                          <th>メールアドレス</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for user in user %}
+                          <tr>
+                            <td>{{ user.id }} </td>
+                            <td><a href="/users/{{user.id}}">{{user.name}}</a> </td>
+                            <td> {{user.userid}} </td>
+                            <td> {{user.email}} </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                   </body>
+               {% endif %}
+         {% endblock %}

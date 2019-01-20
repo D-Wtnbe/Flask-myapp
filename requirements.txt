@@ -1,0 +1,10 @@
+Flask
+Flask-Login
+Flask-SQLAlchemy
+Flask-WTF
+SQLAlchemy
+Werkzeug
+WTForms
+Flask-Bootstrap
+flask_debugtoolbar
+PyMySQL
